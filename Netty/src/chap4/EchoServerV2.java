@@ -13,7 +13,7 @@ public class EchoServerV2 {
 		EventLoopGroup bossGroup = new NioEventLoopGroup(1);
 		EventLoopGroup workerGroup = new NioEventLoopGroup();
 		
-		try {
+		try { 
 			ServerBootstrap b = new ServerBootstrap();
 			b.group(bossGroup, workerGroup)
 			.channel(NioServerSocketChannel.class)
