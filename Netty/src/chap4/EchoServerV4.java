@@ -1,5 +1,6 @@
 package chap4;
 
+import chap5.EchoServerHandlerWithFuture;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -22,8 +23,8 @@ public class EchoServerV4 {
 				@Override
 				public void initChannel(SocketChannel ch) {
 					ChannelPipeline p = ch.pipeline();
-					p.addLast(new EchoServerV4FirstHandler());
-					p.addLast(new EchoServerV4SecondHandler());
+					p.addLast(new EchoServerHandlerWithFuture());
+					//p.addLast(new EchoServerV4SecondHandler());
 				}
 			});
 			
